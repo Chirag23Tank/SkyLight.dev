@@ -6,9 +6,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button'
 import portfolioData from '@/content/portfolio.json'
 import { PortfolioProject } from '@/types'
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
+// Import easing function if needed
+import { easeOut } from 'framer-motion'
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -20,6 +21,7 @@ const containerVariants = {
   },
 }
 
+// FIXED: Remove or fix the ease property
 const itemVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
@@ -27,7 +29,11 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: 'easeOut' as const,
+      // Option 1: Remove it
+      // ease: 'easeOut' as const, // Remove this line
+      
+      // Option 2: Use imported easing function
+      ease: easeOut,
     },
   },
 }
@@ -124,4 +130,3 @@ export default function Portfolio() {
     </section>
   )
 }
-
