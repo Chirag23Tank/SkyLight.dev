@@ -6,9 +6,9 @@ interface Stat {
 }
 
 const stats: Stat[] = [
-  { value: '50+', label: 'Projects Completed' },
-  { value: '30+', label: 'Happy Clients' },
-  { value: '5+', label: 'Years Experience' },
+  { value: '20+', label: 'Projects Completed' },
+  { value: '25+', label: 'Happy Clients' },
+  { value: '2+', label: 'Years Experience' },
   { value: '100%', label: 'Client Satisfaction' },
 ]
 
