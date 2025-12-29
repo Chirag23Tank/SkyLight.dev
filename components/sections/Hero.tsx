@@ -1,20 +1,38 @@
+'use client'
+
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ArrowRight } from 'lucide-react'
 import siteConfig from '@/content/site-config.json'
+import { motion } from 'framer-motion'
 
 export default function Hero() {
   return (
     <section className="relative bg-gradient-to-br from-blue-50 via-white to-blue-50 py-20 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl"
+          >
             {siteConfig.tagline}
-          </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-600 sm:text-xl">
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+            className="mt-6 text-lg leading-8 text-gray-600 sm:text-xl"
+          >
             {siteConfig.description}
-          </p>
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6">
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
+            className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6"
+          >
             <Link href="/contact" className="w-full sm:w-auto">
               <Button size="lg" className="group w-full sm:w-auto">
                 Get Started
@@ -26,7 +44,7 @@ export default function Hero() {
                 View Our Work
               </Button>
             </Link>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
