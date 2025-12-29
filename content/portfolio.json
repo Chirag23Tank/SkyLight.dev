@@ -7,7 +7,7 @@
       "fullDescription": "Built a complete e-commerce solution with React and Next.js, featuring seamless payment processing, real-time inventory management, and an intuitive admin dashboard.",
       "category": "web",
       "technologies": ["React", "Next.js", "TypeScript", "Stripe", "Tailwind CSS"],
-      "image": "/images/portfolio/ecommerce.jpg",
+      "image": "/images/portfolio/ecommerce.png",
       "liveUrl": "https://example.com",
       "githubUrl": "https://github.com/example",
       "featured": true,
@@ -20,19 +20,19 @@
       "fullDescription": "Developed a React Native mobile app that allows teams to collaborate on tasks in real-time, with offline synchronization and push notifications.",
       "category": "mobile",
       "technologies": ["React Native", "Firebase", "TypeScript", "Redux"],
-      "image": "/images/portfolio/taskapp.jpg",
+      "image": "/images/portfolio/taskapp.png",
       "liveUrl": "https://example.com",
       "featured": true,
       "order": 2
     },
     {
       "id": "project-3",
-      "title": "Corporate Network Infrastructure",
+      "title": "News Digest",
       "description": "Secure and scalable network infrastructure for enterprise",
-      "fullDescription": "Designed and implemented a comprehensive network infrastructure solution for a large enterprise, including cloud migration, security hardening, and monitoring setup.",
+      "fullDescription": "Designed and developed a personalized news digest application with automated news aggregation, AI-powered summarization, and sentiment analysis.",
       "category": "networking",
       "technologies": ["AWS", "Cisco", "Fortinet", "Monitoring Tools"],
-      "image": "/images/portfolio/network.jpg",
+      "image": "/images/portfolio/newsdigest.png",
       "featured": true,
       "order": 3
     }

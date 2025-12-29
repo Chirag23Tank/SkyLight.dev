@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import { Linkedin, Twitter, Github, Mail, Phone } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import siteConfig from '@/content/site-config.json'
@@ -77,50 +78,120 @@ export default function AboutPage() {
 
         {/* Team Section */}
         {sortedTeam.length > 0 && (
-          <div className="mx-auto max-w-3xl mb-20">
+          <div className="mx-auto max-w-6xl mb-20">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Our Team</h2>
-            <div className="grid gap-8 sm:grid-cols-2">
-              {sortedTeam.map((member) => (
-                <Card key={member.id}>
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="h-16 w-16 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white text-xl font-bold">
-                        {member.name.charAt(0)}
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
-                        <p className="text-blue-600 mb-2">{member.role}</p>
-                        {member.bio && (
-                          <p className="text-gray-600 text-sm mb-4">{member.bio}</p>
-                        )}
-                        <div className="flex gap-3">
-                          {member.linkedin && (
-                            <a
-                              href={member.linkedin}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-gray-400 hover:text-blue-600 transition-colors"
-                            >
-                              <Linkedin className="h-5 w-5" />
-                            </a>
+            
+            {/* Founders Section */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-semibold text-gray-800 mb-6">Founders</h3>
+              <div className="grid gap-8 sm:grid-cols-2">
+                {sortedTeam
+                  .filter((member) => member.role.toLowerCase().includes('founder'))
+                  .map((member) => (
+                    <Card key={member.id} className="h-full">
+                      <CardContent className="p-8">
+                        <div className="flex items-start gap-4">
+                          {member.image ? (
+                            <div className="h-16 w-16 rounded-full overflow-hidden flex-shrink-0 bg-gray-200">
+                              <Image
+                                src={member.image}
+                                alt={member.name}
+                                width={64}
+                                height={64}
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          ) : (
+                            <div className="h-16 w-16 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white text-xl font-bold flex-shrink-0">
+                              {member.name.charAt(0)}
+                            </div>
                           )}
-                          {member.github && (
-                            <a
-                              href={member.github}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-gray-400 hover:text-blue-600 transition-colors"
-                            >
-                              <Github className="h-5 w-5" />
-                            </a>
-                          )}
+                          <div className="flex-1">
+                            <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
+                            <p className="text-blue-600 mb-2">{member.role}</p>
+                            {member.bio && (
+                              <p className="text-gray-600 text-sm mb-4">{member.bio}</p>
+                            )}
+                            <div className="flex gap-3">
+                              {member.linkedin && (
+                                <a
+                                  href={member.linkedin}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-gray-400 hover:text-blue-600 transition-colors"
+                                >
+                                  <Linkedin className="h-5 w-5" />
+                                </a>
+                              )}
+                              {member.github && (
+                                <a
+                                  href={member.github}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-gray-400 hover:text-blue-600 transition-colors"
+                                >
+                                  <Github className="h-5 w-5" />
+                                </a>
+                              )}
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+                      </CardContent>
+                    </Card>
+                  ))}
+              </div>
             </div>
+
+            {/* Team Members Section */}
+            {sortedTeam.filter((member) => !member.role.toLowerCase().includes('founder')).length > 0 && (
+              <div>
+                <h3 className="text-2xl font-semibold text-gray-800 mb-6">Team Members</h3>
+                <div className="grid gap-8 sm:grid-cols-2">
+                  {sortedTeam
+                    .filter((member) => !member.role.toLowerCase().includes('founder'))
+                    .map((member) => (
+                      <Card key={member.id} className="h-full">
+                        <CardContent className="p-8">
+                          <div className="flex items-start gap-4">
+                            <div className="h-16 w-16 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white text-xl font-bold flex-shrink-0">
+                              {member.name.charAt(0)}
+                            </div>
+                            <div className="flex-1">
+                              <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
+                              <p className="text-blue-600 mb-2">{member.role}</p>
+                              {member.bio && (
+                                <p className="text-gray-600 text-sm mb-4">{member.bio}</p>
+                              )}
+                              <div className="flex gap-3">
+                                {member.linkedin && (
+                                  <a
+                                    href={member.linkedin}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-gray-400 hover:text-blue-600 transition-colors"
+                                  >
+                                    <Linkedin className="h-5 w-5" />
+                                  </a>
+                                )}
+                                {member.github && (
+                                  <a
+                                    href={member.github}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-gray-400 hover:text-blue-600 transition-colors"
+                                  >
+                                    <Github className="h-5 w-5" />
+                                  </a>
+                                )}
+                              </div>
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    ))}
+                </div>
+              </div>
+            )}
           </div>
         )}
 

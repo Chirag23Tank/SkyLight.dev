@@ -62,23 +62,6 @@ export default function Portfolio() {
                     </span>
                   )}
                 </div>
-                <div className="flex gap-2">
-                  {project.liveUrl && (
-                    <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                      <Button variant="outline" size="sm">
-                        <ExternalLink className="mr-2 h-4 w-4" />
-                        Live Demo
-                      </Button>
-                    </Link>
-                  )}
-                  {project.githubUrl && (
-                    <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Button variant="ghost" size="sm">
-                        <Github className="h-4 w-4" />
-                      </Button>
-                    </Link>
-                  )}
-                </div>
               </CardContent>
             </Card>
           ))}

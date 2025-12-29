@@ -2,23 +2,63 @@
   "teamMembers": [
     {
       "id": "member-1",
-      "name": "Alex Johnson",
-      "role": "Founder & CEO",
-      "bio": "Passionate about building innovative digital solutions. 10+ years of experience in web and mobile development.",
-      "image": "/images/team/alex.jpg",
-      "linkedin": "https://linkedin.com/in/alexjohnson",
-      "github": "https://github.com/alexjohnson",
+      "name": "Chirag Tank",
+      "role": "Founder & Service Delivery Head",
+      "bio": "Visionary developer and tech enthusiast with a passion for creating innovative digital solutions. Specializes in modern web technologies, React, Next.js, and full-stack development. Combines technical expertise with strategic thinking to deliver scalable, high-performance applications that drive business growth.",
+      "image": "/images/team/chirag.jpg",
+      "linkedin": "https://linkedin.com/in/chiragtank",
+      "github": "https://github.com/chiragtank",
       "order": 1
     },
     {
       "id": "member-2",
-      "name": "Emily Chen",
-      "role": "Lead Developer",
-      "bio": "Full-stack developer specializing in React, Next.js, and React Native. Loves creating beautiful, performant applications.",
-      "image": "/images/team/emily.jpg",
-      "linkedin": "https://linkedin.com/in/emilychen",
-      "github": "https://github.com/emilychen",
+      "name": "Aakash Singh",
+      "role": "Co-Founder & Chief Executive Officer",
+      "bio": "Dedicated to understanding client needs and building lasting partnerships. Expert in identifying business opportunities and translating client visions into actionable development strategies. Ensures seamless communication between clients and our technical team, delivering solutions that exceed expectations.",
+      "image": "/images/team/aakash.jpg",
+      "linkedin": "https://linkedin.com/in/aakashsingh",
+      "github": "",
       "order": 2
+    },
+    {
+      "id": "member-3",
+      "name": "Anshuman Singh",
+      "role": "Developer",
+      "bio": "Skilled developer passionate about writing clean, efficient code and building robust applications. Contributes to our technical projects with expertise in modern development practices and problem-solving.",
+      "image": "/images/team/anshuman.jpg",
+      "linkedin": "https://linkedin.com/in/anshumansingh",
+      "github": "https://github.com/anshumansingh",
+      "order": 3
+    },
+    {
+      "id": "member-4",
+      "name": "Bharat Singh",
+      "role": "Accounts",
+      "bio": "Dedicated finance professional ensuring accurate financial management and transparent accounting practices. Manages financial operations with precision and attention to detail, supporting the company's growth and stability.",
+      "image": "/images/team/bharat.jpg",
+      "linkedin": "https://linkedin.com/in/bharatsingh",
+      "github": "",
+      "order": 4
+    },
+    {
+      "id": "member-5",
+      "name": "Pinky Sharma",
+      "role": "HR",
+      "bio": "People-focused HR professional committed to fostering a positive work environment and supporting team growth. Manages recruitment, employee relations, and organizational development to build a strong, cohesive team.",
+      "image": "/images/team/pinky.jpg",
+      "linkedin": "https://linkedin.com/in/pinkysharma",
+      "github": "",
+      "order": 5
+    },
+    {
+      "id": "member-6",
+      "name": "Devendra",
+      "role": "Sales",
+      "bio": "Results-driven sales professional focused on building client relationships and driving business growth. Expert in identifying opportunities, understanding client needs, and delivering solutions that create value for our partners.",
+      "image": "/images/team/devendra.jpg",
+      "linkedin": "https://linkedin.com/in/devendra",
+      "github": "",
+      "order": 6
     }
   ]
 }

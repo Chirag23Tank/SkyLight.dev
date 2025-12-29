@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@/lib/supabase/server'
+import { createAdminClient } from '@/lib/supabase/admin'
 import { z } from 'zod'
 
 // Simple in-memory rate limiter (per server instance).
@@ -47,7 +47,7 @@ export async function POST(request: NextRequest) {
 
     // Rate limiting by IP
     const ip =
-      request.headers.get('x-forwarded-for') ||
+      request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
       request.headers.get('x-real-ip') ||
       'unknown'
     if (isRateLimited(`contact_${ip}`)) {
@@ -70,7 +70,8 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const supabase = await createClient()
+    // Use admin client for server-side operations (bypasses RLS)
+    const supabase = createAdminClient()
 
     const { data, error } = await supabase
       .from('contact_submissions')
@@ -84,22 +85,33 @@ export async function POST(request: NextRequest) {
         budget_range: validatedData.budgetRange,
         timeline: validatedData.timeline,
         source: validatedData.source,
-        ip_address: request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip'),
+        ip_address: ip,
         user_agent: request.headers.get('user-agent'),
+        created_at: new Date().toISOString(),
       })
       .select()
       .single()
 
     if (error) {
-      console.error('Supabase error:', error)
+      // Log error for monitoring (don't expose internal details to client)
+      console.error('Supabase error:', {
+        code: error.code,
+        message: error.message,
+      })
+      
       return NextResponse.json(
         { error: 'Failed to submit form. Please try again.' },
         { status: 500 }
       )
     }
 
+    // Success - return minimal data (don't expose internal IDs unnecessarily)
     return NextResponse.json(
-      { success: true, data },
+      { 
+        success: true,
+        message: 'Thank you! Your message has been received.',
+        submissionId: data.id 
+      },
       { status: 201 }
     )
   } catch (error) {
