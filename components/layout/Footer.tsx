@@ -107,14 +107,18 @@ export default function Footer() {
                   </a>
                 </li>
               )}
-              {siteConfig.phone && (
-                <li className="flex items-center gap-2">
-                  <Phone className="h-4 w-4" />
-                  <a href={`tel:${siteConfig.phone}`} className="hover:text-white transition-colors">
-                    {siteConfig.phone}
-                  </a>
-                </li>
-              )}
+              <li className="flex items-center gap-2">
+                <Phone className="h-4 w-4" />
+                <a href="tel:+916367583182" className="hover:text-white transition-colors">
+                  +91 6367583182
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone className="h-4 w-4" />
+                <a href="tel:+918949079430" className="hover:text-white transition-colors">
+                  +91 89490 79430
+                </a>
+              </li>
             </ul>
           </div>
         </div>

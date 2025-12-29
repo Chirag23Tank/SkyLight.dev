@@ -14,15 +14,15 @@ export default function Hero() {
           <p className="mt-6 text-lg leading-8 text-gray-600 sm:text-xl">
             {siteConfig.description}
           </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <Link href="/contact">
-              <Button size="lg" className="group">
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6">
+            <Link href="/contact" className="w-full sm:w-auto">
+              <Button size="lg" className="group w-full sm:w-auto">
                 Get Started
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>
-            <Link href="/portfolio">
-              <Button variant="outline" size="lg">
+            <Link href="/portfolio" className="w-full sm:w-auto">
+              <Button variant="outline" size="lg" className="w-full sm:w-auto">
                 View Our Work
               </Button>
             </Link>
