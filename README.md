@@ -1,36 +1,137 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SkyLight.dev Website
+
+A modern, professional website for SkyLight.dev built with Next.js 14, TypeScript, Tailwind CSS, and Supabase.
+
+## Features
+
+- 🚀 **Next.js 14** with App Router
+- 📱 **Fully Responsive** design
+- ⚡ **Fast Performance** with optimized loading
+- 🎨 **Modern UI** with Tailwind CSS
+- 📝 **Contact Form** with Supabase integration
+- 🔍 **SEO Optimized** with metadata
+- ♿ **Accessible** components
+
+## Pages
+
+- **Home** - Hero section, services overview, portfolio showcase, testimonials
+- **Services** - Detailed service offerings
+- **Portfolio** - Project showcase
+- **About** - Company information and team
+- **Blog** - Blog posts (coming soon)
+- **Contact** - Contact form and information
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Node.js 18+ 
+- npm or yarn
+- Supabase account and project
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   cd skylight-website
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+   
+   Create a `.env.local` file in the root directory:
+   ```env
+   NEXT_PUBLIC_SUPABASE_URL=your_project_url_here
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key_here
+   SUPABASE_SERVICE_ROLE_KEY=your_service_role_key_here
+   NEXT_PUBLIC_SITE_URL=http://localhost:3000
+   NEXT_PUBLIC_SITE_NAME=SkyLight.dev
+   ```
+
+   Get your Supabase credentials from:
+   - Supabase Dashboard → Settings → API
+
+4. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+5. **Open your browser**
+   
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## Database Setup
+
+Make sure you've created the `contact_submissions` table in your Supabase database. Run the SQL script provided in your database setup documentation.
+
+## Project Structure
+
+```
+skylight-website/
+├── app/
+│   ├── (marketing)/          # Marketing pages
+│   ├── api/                  # API routes
+│   ├── layout.tsx            # Root layout
+│   └── globals.css           # Global styles
+├── components/
+│   ├── ui/                   # Reusable UI components
+│   ├── layout/               # Header, Footer
+│   ├── forms/                # Form components
+│   └── sections/             # Page sections
+├── content/                  # JSON content files
+├── lib/
+│   ├── supabase/             # Supabase clients
+│   └── utils.ts              # Utility functions
+└── types/                    # TypeScript types
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Customization
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Update Content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Edit JSON files in the `content/` directory:
+- `services.json` - Service offerings
+- `portfolio.json` - Portfolio projects
+- `testimonials.json` - Client testimonials
+- `team.json` - Team members
+- `site-config.json` - Site configuration
 
-## Learn More
+### Styling
 
-To learn more about Next.js, take a look at the following resources:
+The project uses Tailwind CSS. Modify styles in:
+- Component files (inline Tailwind classes)
+- `app/globals.css` for global styles
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Build for Production
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run build
+npm start
+```
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The easiest way to deploy is using [Vercel](https://vercel.com):
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Push your code to GitHub
+2. Import your repository in Vercel
+3. Add your environment variables
+4. Deploy!
+
+## Technologies Used
+
+- **Next.js 14** - React framework
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling
+- **Supabase** - Database and backend
+- **React Hook Form** - Form handling
+- **Zod** - Schema validation
+- **Lucide React** - Icons
+
+## License
+
+Private - SkyLight.dev

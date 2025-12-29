@@ -1,0 +1,35 @@
+{
+  "testimonials": [
+    {
+      "id": "testimonial-1",
+      "clientName": "John Smith",
+      "clientCompany": "TechCorp",
+      "clientRole": "CEO",
+      "testimonial": "SkyLight.dev delivered an exceptional web application that exceeded our expectations. The team was professional, responsive, and the final product was outstanding. Highly recommended!",
+      "rating": 5,
+      "featured": true,
+      "order": 1
+    },
+    {
+      "id": "testimonial-2",
+      "clientName": "Sarah Johnson",
+      "clientCompany": "StartupHub",
+      "clientRole": "Founder",
+      "testimonial": "The mobile app they built for us was exactly what we needed. The React Native implementation was flawless, and the app performs beautifully on both iOS and Android.",
+      "rating": 5,
+      "featured": true,
+      "order": 2
+    },
+    {
+      "id": "testimonial-3",
+      "clientName": "Mike Davis",
+      "clientCompany": "Enterprise Solutions",
+      "clientRole": "CTO",
+      "testimonial": "Their networking expertise helped us modernize our infrastructure. The implementation was smooth, and we've seen significant improvements in performance and security.",
+      "rating": 5,
+      "featured": true,
+      "order": 3
+    }
+  ]
+}
+

@@ -1,0 +1,53 @@
+{
+  "services": [
+    {
+      "id": "web-development",
+      "title": "Web Development",
+      "shortDescription": "Modern, responsive web applications built with cutting-edge technologies",
+      "description": "We specialize in building high-performance web applications using React, Next.js, and modern web technologies. Our solutions are scalable, maintainable, and optimized for search engines.",
+      "icon": "code",
+      "features": [
+        "React & Next.js Development",
+        "TypeScript for Type Safety",
+        "Responsive Design",
+        "SEO Optimization",
+        "Performance Optimization",
+        "Modern UI/UX Design"
+      ],
+      "order": 1
+    },
+    {
+      "id": "mobile-apps",
+      "title": "React Native Mobile Apps",
+      "shortDescription": "Cross-platform mobile applications for iOS and Android",
+      "description": "Build native-like mobile apps for both iOS and Android with a single codebase. We use React Native to deliver high-performance mobile applications that look and feel native.",
+      "icon": "smartphone",
+      "features": [
+        "iOS & Android Development",
+        "React Native",
+        "Native Performance",
+        "App Store Deployment",
+        "Push Notifications",
+        "Offline Capabilities"
+      ],
+      "order": 2
+    },
+    {
+      "id": "networking",
+      "title": "Networking Solutions",
+      "shortDescription": "Expert networking infrastructure and consulting services",
+      "description": "We provide comprehensive networking solutions including cloud networking, security, infrastructure design, and ongoing support. Our expertise helps businesses build reliable and secure network infrastructures.",
+      "icon": "network",
+      "features": [
+        "Cloud Networking",
+        "Network Security",
+        "Infrastructure Design",
+        "Consulting Services",
+        "Network Monitoring",
+        "24/7 Support"
+      ],
+      "order": 3
+    }
+  ]
+}
+

@@ -1,0 +1,41 @@
+{
+  "projects": [
+    {
+      "id": "project-1",
+      "title": "E-Commerce Platform",
+      "description": "A modern e-commerce platform with payment integration and inventory management",
+      "fullDescription": "Built a complete e-commerce solution with React and Next.js, featuring seamless payment processing, real-time inventory management, and an intuitive admin dashboard.",
+      "category": "web",
+      "technologies": ["React", "Next.js", "TypeScript", "Stripe", "Tailwind CSS"],
+      "image": "/images/portfolio/ecommerce.jpg",
+      "liveUrl": "https://example.com",
+      "githubUrl": "https://github.com/example",
+      "featured": true,
+      "order": 1
+    },
+    {
+      "id": "project-2",
+      "title": "Task Management App",
+      "description": "Cross-platform task management application for teams",
+      "fullDescription": "Developed a React Native mobile app that allows teams to collaborate on tasks in real-time, with offline synchronization and push notifications.",
+      "category": "mobile",
+      "technologies": ["React Native", "Firebase", "TypeScript", "Redux"],
+      "image": "/images/portfolio/taskapp.jpg",
+      "liveUrl": "https://example.com",
+      "featured": true,
+      "order": 2
+    },
+    {
+      "id": "project-3",
+      "title": "Corporate Network Infrastructure",
+      "description": "Secure and scalable network infrastructure for enterprise",
+      "fullDescription": "Designed and implemented a comprehensive network infrastructure solution for a large enterprise, including cloud migration, security hardening, and monitoring setup.",
+      "category": "networking",
+      "technologies": ["AWS", "Cisco", "Fortinet", "Monitoring Tools"],
+      "image": "/images/portfolio/network.jpg",
+      "featured": true,
+      "order": 3
+    }
+  ]
+}
+

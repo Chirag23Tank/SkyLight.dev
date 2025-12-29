@@ -1,0 +1,25 @@
+{
+  "teamMembers": [
+    {
+      "id": "member-1",
+      "name": "Alex Johnson",
+      "role": "Founder & CEO",
+      "bio": "Passionate about building innovative digital solutions. 10+ years of experience in web and mobile development.",
+      "image": "/images/team/alex.jpg",
+      "linkedin": "https://linkedin.com/in/alexjohnson",
+      "github": "https://github.com/alexjohnson",
+      "order": 1
+    },
+    {
+      "id": "member-2",
+      "name": "Emily Chen",
+      "role": "Lead Developer",
+      "bio": "Full-stack developer specializing in React, Next.js, and React Native. Loves creating beautiful, performant applications.",
+      "image": "/images/team/emily.jpg",
+      "linkedin": "https://linkedin.com/in/emilychen",
+      "github": "https://github.com/emilychen",
+      "order": 2
+    }
+  ]
+}
+

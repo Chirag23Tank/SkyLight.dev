@@ -19,7 +19,18 @@
 
 # production
 /build
-
+/,env
+/.next/
+/.next/static
+/.next/static/chunks
+/.next/static/chunks/pages
+/.next/static/chunks/pages/index.js
+/.next/static/chunks/pages/index.js.map
+/.next/static/chunks/pages/index.js.map.br
+/.next/static/chunks/pages/index.js.map.gz
+/.next/static/chunks/pages/index.js.map.br.gz
+/.next/static/chunks/pages/index.js.map.gz.br
+/.next/static/chunks/pages/index.js.map.br.gz.br
 # misc
 .DS_Store
 *.pem
