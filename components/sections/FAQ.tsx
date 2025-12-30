@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { easeInOut } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
 
 interface FAQItem {
@@ -89,7 +90,7 @@ export default function FAQ() {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: 'auto', opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: 'easeInOut' }}
+                      transition={{ duration: 0.3, ease: easeInOut }}
                       className="overflow-hidden"
                     >
                       <div className="px-6 pb-4 text-gray-600">{faq.answer}</div>

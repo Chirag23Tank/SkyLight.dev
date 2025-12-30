@@ -6,6 +6,7 @@ import servicesData from '@/content/services.json'
 import { Service } from '@/types'
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
+import { easeOut } from 'framer-motion'
 import { useRef } from 'react'
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -31,7 +32,7 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: 'easeOut',
+      ease: easeOut,
     },
   },
 }
@@ -76,11 +77,11 @@ export default function Services() {
                     <CardTitle>{service.title}</CardTitle>
                     <CardDescription>{service.shortDescription}</CardDescription>
                   </CardHeader>
-                  <CardContent className="flex-grow">
+                  <CardContent className="grow">
                     <ul className="space-y-2">
                       {service.features.map((feature, index) => (
                         <li key={index} className="flex items-start gap-2 text-sm text-gray-600">
-                          <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-600" />
+                          <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-600" />
                           {feature}
                         </li>
                       ))}

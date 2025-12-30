@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { ArrowRight } from 'lucide-react'
 import siteConfig from '@/content/site-config.json'
 import { motion } from 'framer-motion'
+import { easeOut } from 'framer-motion'
 
 export default function Hero() {
   return (
@@ -14,7 +15,7 @@ export default function Hero() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: 'easeOut' }}
+            transition={{ duration: 0.6, ease: easeOut }}
             className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl"
           >
             {siteConfig.tagline}
@@ -22,7 +23,7 @@ export default function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+            transition={{ duration: 0.6, delay: 0.2, ease: easeOut }}
             className="mt-6 text-lg leading-8 text-gray-600 sm:text-xl"
           >
             {siteConfig.description}
@@ -30,7 +31,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
+            transition={{ duration: 0.6, delay: 0.4, ease: easeOut }}
             className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6"
           >
             <Link href="/contact" className="w-full sm:w-auto">

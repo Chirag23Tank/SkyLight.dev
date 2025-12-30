@@ -6,6 +6,7 @@ import testimonialsData from '@/content/testimonials.json'
 import { Testimonial } from '@/types'
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
+import { easeOut } from 'framer-motion'
 import { useRef } from 'react'
 
 const containerVariants = {
@@ -25,7 +26,7 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: 'easeOut',
+      ease: easeOut,
     },
   },
 }
