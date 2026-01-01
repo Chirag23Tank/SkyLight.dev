@@ -1,10 +1,10 @@
-# Setup Guide - SkyLight.dev Website
+# Setup Guide - Arisotech Website
 
 ## Quick Start
 
 ### 1. Environment Variables Setup
 
-Create a `.env.local` file in the `skylight-website` directory with the following:
+Create a `.env.local` file in the `arisotech-website` directory with the following:
 
 ```env
 # Supabase Configuration
@@ -14,7 +14,7 @@ SUPABASE_SERVICE_ROLE_KEY=your_service_role_key_here
 
 # App Configuration
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
-NEXT_PUBLIC_SITE_NAME=SkyLight.dev
+NEXT_PUBLIC_SITE_NAME=Arisotech
 ```
 
 **Where to find Supabase credentials:**
@@ -33,7 +33,7 @@ Make sure you've created the `contact_submissions` table in Supabase. If you hav
 ### 3. Run Development Server
 
 ```bash
-cd skylight-website
+cd arisotech-website
 npm install
 npm run dev
 ```

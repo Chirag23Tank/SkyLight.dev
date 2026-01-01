@@ -8,7 +8,7 @@ import { TeamMember } from '@/types'
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'Learn more about SkyLight.dev and our team of experts',
+  description: 'Learn more about Arisotech and our team of experts',
 }
 
 export default function AboutPage() {
@@ -21,7 +21,7 @@ export default function AboutPage() {
         {/* Hero Section */}
         <div className="mx-auto max-w-2xl text-center mb-20">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-            About SkyLight.dev
+            About Arisotech
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
             {siteConfig.description}
@@ -32,7 +32,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-3xl mb-20">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            At SkyLight.dev, we're passionate about helping businesses succeed through innovative technology solutions. 
+            At Arisotech, we're passionate about helping businesses succeed through innovative technology solutions. 
             We believe that great software can transform businesses and create lasting value for our clients.
           </p>
         </div>

@@ -1,6 +1,6 @@
-# SkyLight.dev Website
+# Arisotech Website
 
-A modern, professional website for SkyLight.dev built with Next.js 14, TypeScript, Tailwind CSS, and Supabase.
+A modern, professional website for Arisotech built with Next.js 14, TypeScript, Tailwind CSS, and Supabase.
 
 ## Features
 
@@ -33,7 +33,7 @@ A modern, professional website for SkyLight.dev built with Next.js 14, TypeScrip
 
 1. **Clone the repository**
    ```bash
-   cd skylight-website
+   cd arisotech-website
    ```
 
 2. **Install dependencies**
@@ -49,7 +49,7 @@ A modern, professional website for SkyLight.dev built with Next.js 14, TypeScrip
    NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key_here
    SUPABASE_SERVICE_ROLE_KEY=your_service_role_key_here
    NEXT_PUBLIC_SITE_URL=http://localhost:3000
-   NEXT_PUBLIC_SITE_NAME=SkyLight.dev
+   NEXT_PUBLIC_SITE_NAME=Arisotech
    ```
 
    Get your Supabase credentials from:
@@ -71,7 +71,7 @@ Make sure you've created the `contact_submissions` table in your Supabase databa
 ## Project Structure
 
 ```
-skylight-website/
+arisotech-website/
 ├── app/
 │   ├── (marketing)/          # Marketing pages
 │   ├── api/                  # API routes
@@ -134,4 +134,4 @@ The easiest way to deploy is using [Vercel](https://vercel.com):
 
 ## License
 
-Private - SkyLight.dev
+Private - Arisotech

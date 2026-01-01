@@ -5,7 +5,7 @@ import siteConfig from '@/content/site-config.json'
 
 export const metadata: Metadata = {
   title: 'Contact Us',
-  description: 'Get in touch with SkyLight.dev for your next project',
+  description: 'Get in touch with Arisotech for your next project',
 }
 
 export default function ContactPage() {

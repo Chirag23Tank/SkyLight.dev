@@ -5,7 +5,7 @@ import { format } from 'date-fns'
 
 export const metadata: Metadata = {
   title: 'Blog',
-  description: 'Latest articles and insights from SkyLight.dev',
+  description: 'Latest articles and insights from Arisotech',
 }
 
 // Mock blog posts - you can replace this with actual blog data later

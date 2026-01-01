@@ -124,7 +124,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
-          <p>&copy; {currentYear} {siteConfig.siteName}. All rights reserved.</p>
+          <p>&copy; 2025 {siteConfig.siteName}. All rights reserved.</p>
         </div>
       </div>
     </footer>
